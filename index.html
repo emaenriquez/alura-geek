@@ -8,29 +8,25 @@
 </head>
 <body>
   <div class="contenedor">
-    <header>
-      <h1>ALura Geek</h1>
+    <header class="contenedor__header">
+      <img src="./img/Logo.png" alt="logo" class="logo">
     </header>
     <main>
       <div class="contenedor__formulario">
-        <h2>Agregar Producto!!!</h2>
-        <form>
-          <input class="input__nombre" type="text" placeholder="nombre">
-          <input class="input__precio" type="number" placeholder="precio">
-          <input class="input__imagen" type="text" placeholder="imagen">
-          <button class="btn__enviar" type="submit">Enviar</button>
-          <button class="btn__limpiar" type="button">Limpiar</button>
+        <h2 class="titulo__formulario">AGREGAR PRODUCTO:</h2>
+        <form class="formulario">
+          <input class="input__formulario input__nombre" type="text" placeholder="nombre">
+          <input class="input__formulario input__precio" type="number" placeholder="precio">
+          <input class="input__formulario input__imagen" type="text" placeholder="imagen">
+          <div class="btn__contenedor">
+            <button class="btn btn__enviar" type="submit">Enviar</button>
+            <button class="btn btn__limpiar" type="button">Limpiar</button>
+          </div>
         </form>
       </div>
+      
       <div class="contenedor__productos">
-        <!-- <div class="contenedor__card">
-          <img class="img__producto" src="img/imagen-producto.jpg" alt="producto">
-          <p>nombre producto</p>
-          <div class="contenedor__card-contendio">
-            <p>$ 60.00</p>
-            <img class="" src="img/trash.png">
-          </div>
-        </div> -->
+        <h2>MIS PRODUCTOS:</h2>
       </div>
     </main>
   </div>

@@ -140,3 +140,16 @@
 }
 
 
+footer {
+    background-color: rgba(93, 4, 217, 1);
+}
+
+footer h3 , h4 {
+    font-family: IBM Plex Mono;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 16px;
+    text-align: center;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 1);
+}

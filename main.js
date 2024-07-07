@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <img class="img__eliminar" src="img/vector.png" alt="img eliminar">
           </div>
         `;
+
+        productoDiv.querySelector('.img__eliminar').addEventListener('click', () => {
+            eliminarProducto(producto, productoDiv);
+        });
+
         let contenedorCardJs = document.querySelector('.contenedor__card-js');
         if (!contenedorCardJs) {
             contenedorCardJs = document.createElement('div');
@@ -28,6 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
             contenedorProducto.appendChild(contenedorCardJs);
         }
         contenedorCardJs.appendChild(productoDiv);
+    };
+
+    const eliminarProducto = (producto, productoDiv) => {
+        let productos = JSON.parse(localStorage.getItem('productos')) || [];
+        productos = productos.filter(p => p.nombre !== producto.nombre || p.precio !== producto.precio || p.imagen !== producto.imagen);
+        localStorage.setItem('productos', JSON.stringify(productos));
+        productoDiv.remove();
     };
 
     const AgregarProductos = (e) => {

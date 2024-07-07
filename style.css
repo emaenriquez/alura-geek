@@ -47,19 +47,10 @@
     border-radius: 4rem;
 }
 .input__formulario::placeholder {
-
-    width: 181.32px;
-    height: 39px;
-    top: 10px;
-    left: 12.64px;
-    gap: 0px;
-    opacity: 0px;
-
-
     font-size: 16px;
     font-weight: 600;
-    line-height: 20.8px;
     color: rgba(3, 49, 140, 1);
+    padding: 5px;
 }
 
 .btn__contenedor {
@@ -67,6 +58,7 @@
     display: flex;
     gap: 10px;
     padding: 20px;
+    justify-content: center;
 }
 
 .btn__enviar {
@@ -97,7 +89,54 @@
     background-color: rgba(255, 255, 255, 1);
     color: rgba(3, 49, 140, 1);
 }
-
-.img__producto{
-    width: 50%;
+/* card productos estilos */
+.contenedor__productos h2 {
+    text-align: center;
+    padding: 3rem;
 }
+.contenedor__card-js{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.contenedor__card {
+    padding: 10px;
+    gap: 10px;
+    width: 18rem;
+    height: 100%;
+    border-radius: 10px;
+    border: 3px solid #000;
+    opacity: 0px;
+    background-color: rgba(93, 4, 217, 1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.img__producto {
+    width: 100%;
+    height: 70%;
+    /* padding: 5px; */
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.contenedor__card-contenido {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.nombre__producto {
+    padding:5px;
+}
+
+.nombre__producto , .precio__producto{
+    color: #fff;
+}
+
+.img__eliminar {
+    width: 20px;
+}
+
+

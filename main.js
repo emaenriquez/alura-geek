@@ -13,19 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const agregarProductoAlDOM = (producto) => {
         let productoDiv = document.createElement('div');
         productoDiv.classList.add('contenedor__card');
-
         productoDiv.innerHTML = `
-        <div class="contenedor__card">
           <img class="img__producto" src="${producto.imagen}" alt="producto">
-          <p>${producto.nombre}</p>
+          <p class="nombre__producto">${producto.nombre}</p>
           <div class="contenedor__card-contenido">
-            <p>$ ${producto.precio}</p>
-            <img class="" src="img/trash.png" alt="Eliminar">
+            <p class="precio__producto">$ ${producto.precio}</p>
+            <img class="img__eliminar" src="img/vector.png" alt="img eliminar">
           </div>
-        </div>
-      `;
-
-        contenedorProducto.appendChild(productoDiv);
+        `;
+        let contenedorCardJs = document.querySelector('.contenedor__card-js');
+        if (!contenedorCardJs) {
+            contenedorCardJs = document.createElement('div');
+            contenedorCardJs.classList.add('contenedor__card-js');
+            contenedorProducto.appendChild(contenedorCardJs);
+        }
+        contenedorCardJs.appendChild(productoDiv);
     };
 
     const AgregarProductos = (e) => {
